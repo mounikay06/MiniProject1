@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="book.css">
+    <title>Mini-Project</title>
+</head>
+<body>
+    <h1>Book Management System</h1>
+    <div class="wrapper">
+    <button id="b1" onclick="displaytable();">Book List</button>
+    <button id="ad" onclick="displayaddbooks();">Add Books</button>
+    </div><br><br><br><br>
+    <hr>
+    <!-- <select id="selection" onchange="placeHoder()"> -->
+    <select id="selection">
+        <option value="Select">Select</option>
+        <option value="Id">Id</option>
+        <option value="Title">Title</option>
+        <option value="Author">Author</option>
+        <option value="Price">Price</option>
+        <option value="Rating">Rating</option>
+    </select>
+    <input type="search" id="mysearch" placeholder="search here...">
+    <button type="submit" id="but" onclick="search();">Search</button>
+    <!-- <button type="submit" id="but1" onclick="clear();">Clear</button> -->
+    
+    <div id="add">
+        <form action="#">
+            <label >ID</label><br>
+            <input id="Id" type="text"><br><br>
+            <label>Title</label><br>
+            <input id="Title" type="text"><br><br>
+            <label >Author</label><br>
+            <input id = "Author" type="text"><br><br>
+            <label>Price</label><br>
+            <input id="Price" type="text"><br><br>
+            <label >Rating</label><br>
+            <input id="Rating" type="text"><br><br>
+            <button>Add Book</button>
+        </form>
+    </div>
+
+
+    <div id="main">
+    <h2>Book List</h2>
+        <table id="booktable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Price</th>
+                    <th>Rating</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id = "tableBody">
+
+            </tbody>
+        </table>
+        </div>
+        <script src="BookManager.js"></script>
+</body>
+</html>
